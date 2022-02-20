@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1>{{ task.name }}</h1>
+    <span class="badge badge-{{ label_type }}">
+        {{ delta_time }}
+    </span>
+    
+    
+    <p>{{ task.deadline }}</p>
+    <p>{{ task.description }}</p>
+</div>
+<a class="btn btn-light" href="edit" role="button">Edit</a>
+<a class="btn btn-danger" href="delete" role="button">Delete</a>
+
+{% endblock %}
